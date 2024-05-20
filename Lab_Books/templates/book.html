@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    
+      <title>Title</title>#}
+       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="d-flex justify-content-center" style="background-color: darkblue;padding-top: 35px;padding-bottom: 12px">
+<nav class="navbar navbar-light bg-light">
+    <img src="{% static 'Screenshot_1.png' %}" width="300" height="50" alt="">
+</nav>
+</div>
+<div class="bg-info">
+    <br>
+</div>
+
+<div class="d-flex justify-content-center bg-info" style="padding-bottom: 25px">
+    <h2>{{ book.title }}</h2>
+</div>
+
+<div class="bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="{{ MEDIA_URL }}{{ book.image.url }}" alt="d">
+            </div>
+            <div class="col-md-6" style="padding-top: 20px">
+                <h2>{{ book.house_publish }}</h2>
+                <h2>{{ book.category }}</h2>
+                <h2>{{ book.isbn }}</h2>
+                <h2>{{ book.year_published }}</h2>
+                <h2>{{ book.price }}</h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+</body>
+</html>
